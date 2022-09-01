@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body{
+    background-color: #475262;
+}
+
+header{
+    text-align: center;
+    padding: 50px 0;
+    background-color: rgba(0, 233, 0, 0.63);
+}
+
+header .titulo{
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+}
+
+section {
+    font-family: 'Roboto', sans-serif;
+    margin: 50px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botoes{
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.botoes button{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 40px;
+    margin: 50px;
+    background-color: rgb(20, 18, 18);
+    color:white;
+    cursor: pointer;
+}
+
+section .personagens{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+section .personagens .lista{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    align-items: center;
+}
+
+.lista img{
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.lista li{
+    font-size: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 200px;
+    min-width: fit-content;
+    padding: 10px;
+    background-color: white;
+}
