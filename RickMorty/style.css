@@ -8,33 +8,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 body{
-    background-color: #475262;
+    background-color: #ccc;
 }
 
 header{
     text-align: center;
-    padding: 50px 0;
-    background-color: rgba(0, 233, 0, 0.63);
-}
-
-header .titulo{
-    font-family: 'Roboto', sans-serif;
-    font-size: 40px;
+    padding: 50px 0 50px;
 }
 
 section {
     font-family: 'Roboto', sans-serif;
-    margin: 50px;
     display:flex;
     flex-direction: column;
     align-items: center;
 }
 
-.botoes{
-    width: 50vw;
+
+section .personagens{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
+}
+
+section .personagens .item{
+    display: flex;
+    flex-direction: row;
+    overflow:hidden;
+    width: 30vw;
+    margin: 10px 20px;
+    padding: 20px ;
+    border-radius: 8px;
+    background-color: #475262;
+    color: white;
+    list-style: none;
+    line-height: 2.2em;
+    
+}
+
+.item img{
+    max-width: 10vw;
+    border-radius: 8px;
+}
+
+.item li{
+    margin-top: 10px;
+    margin-left: 15px;
+    font-size: 1.5em;
+    font-weight: 550;
+    max-width: fit-content;
+}
+
+.botoes{
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+    flex-direction: row;
 }
 
 .botoes button{
@@ -50,32 +80,106 @@ section {
     cursor: pointer;
 }
 
-section .personagens{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+footer{
+    margin: 30px;
+    padding: 30px 0 10px;
+    font-size: 1.3rem;
+    text-align: center;
 }
 
-section .personagens .lista{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-    align-items: center;
+footer a{
+    color: #475262;
 }
 
-.lista img{
-    margin: 20px 0;
-    border-radius: 10px;
+
+/* RESPONSIVIDADE */
+@media only screen and (max-width: 900px){
+    
+    header img{
+        max-width: 70vw;
+    }
+    section .personagens{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    section .personagens .item{
+        min-width: 90%;
+        padding: 20px ;
+        line-height: 2em;
+    }
+
+    .item img{
+        min-width:30%;
+    }
+
+    .item li{
+        font-size: 1.5rem;
+        font-weight: 550;
+    }
+
+    .botoes button{
+        font-size: 1.2rem;
+        padding: 20px 40px;
+    }
 }
 
-.lista li{
-    font-size: 30px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    max-width: 200px;
-    min-width: fit-content;
-    padding: 10px;
-    background-color: white;
+@media only screen and (max-width: 1200px){
+    header img{
+        max-width: 70vw;
+    }
+    section .personagens{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    section .personagens .item{
+        width: 90%;
+        padding: 20px ;
+        line-height: 2em;
+    }
+    
+    .item img{
+        min-width:30%;
+    }
+
+    .item li{
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+    
+    .botoes button{
+        font-size: 1.2rem;
+        padding: 20px 40px;
+    }
+}
+
+@media only screen and (max-width: 1400px){
+    header img{
+        max-width: 70vw;
+    }
+    section .personagens{
+        flex-direction: row;
+        width: 100%;
+    }
+
+    section .personagens .item{
+        width: 45%;
+        padding: 20px ;
+        line-height: 2.1em;
+    }
+    
+    .item img{
+        min-width: 40%;
+    }
+
+    .item li{
+        font-size: 1.7rem;
+        font-weight: 500;
+    }
+    
+    .botoes button{
+        font-size: 1.5rem;
+        padding: 20px 40px;
+    }
 }

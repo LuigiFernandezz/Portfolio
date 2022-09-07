@@ -30,6 +30,7 @@ async function getLista(url){
         return resultado
     })
     .then((listaPersonagens) =>{
+        window.scrollTo(0,0);
         let s = document.querySelector('.secao')
         s.removeChild(document.querySelector('.personagens'))
         let div = document.createElement('div')
@@ -37,11 +38,11 @@ async function getLista(url){
         s.appendChild(div)
         return listaPersonagens.map((element)=> {
             let ul = document.createElement('ul')
-            ul.setAttribute('class','lista')
+            ul.setAttribute('class','item')
             let img = document.createElement('img')
             img.setAttribute('src', `${element.image}`)
             let li = document.createElement('li')
-            li.innerText = `${element.name}`
+            li.innerText = `Nome: ${element.name}\nSituação: ${element.status== 'Alive' ? 'Vivo' : 'Morto'}\n Espécie: ${element.species}`
             ul.appendChild(img)
             ul.appendChild(li)
             div.appendChild(ul)
